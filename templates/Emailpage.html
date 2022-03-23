@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+  <title>Email Page</title>
+</head>
+<body>
+  <center>
+    <h1>Please Send Your Mail</h1>
+     <img src="{% static 'img/download.jpg' %}" alt="" />
+    <hr>
+    <form method="POST">
+        {% csrf_token %}
+      <table border = '1'>
+        {{form}}
+      </table>
+      <br>
+      <input type="submit" name="" value="Send">
+    </form>
+
+  </center>
+</body>
+</html>
